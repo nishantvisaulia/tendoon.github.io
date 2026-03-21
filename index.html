@@ -1,201 +1,95 @@
+<header style="background:#000; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
+  <a href="index.html"><img src="logo2.png" alt="Tendoon Logo" style="height:60px;"></a>
+  <nav>
+    <a href="index.html" style="color:white; margin:0 10px; text-decoration:none;">Home</a>
+    <a href="services.html" style="color:white; margin:0 10px; text-decoration:none;">Services</a>
+    <a href="portfolio.html" style="color:white; margin:0 10px; text-decoration:none;">Portfolio</a>
+    <a href="about.html" style="color:white; margin:0 10px; text-decoration:none;">About</a>
+    <a href="contact.html" style="color:white; margin:0 10px; text-decoration:none;">Contact</a>
+  </nav>
+</header>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tendoon</title>
+  <title>Tendoon - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #000;
-      color: white;
-    }
-
-    h1 { font-size:50px; margin:0; }
-    h2 { font-size:32px; margin-bottom:20px; }
-    h3 { margin:10px 0; }
-    p { color:#aaa; margin-top:10px; }
-
-    /* NAVBAR */
-    nav {
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      padding:20px;
-      background:#111;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    nav a {
-      text-decoration:none;
-      color:white;
-      font-weight:600;
-      transition:0.3s;
-    }
-    nav a:hover { color:#7B2FFF; }
-
-    .hero {
-      height: 100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      background:#000;
-      gap:15px;
-      padding:0 20px;
-    }
-
-    .btn {
-      padding:12px 25px;
-      background:linear-gradient(45deg,#7B2FFF,#00C2FF);
-      border-radius:8px;
-      text-decoration:none;
-      color:white;
-      transition:0.3s;
-      box-shadow:0 0 10px #7B2FFF;
-      display:inline-block;
-    }
-    .btn:hover {
-      transform:scale(1.05);
-      box-shadow:0 0 15px #00C2FF;
-    }
-
-    section {
-      padding:60px 20px;
-      text-align:center;
-      background:#000;
-    }
-
-    .dark { background:#000; }
-
-    .grid {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .card {
-      background:#111;
-      padding:20px;
-      border-radius:10px;
-      width:250px;
-      box-shadow:0 0 10px rgba(123,47,255,0.3);
-      transition:0.3s;
-      cursor:pointer;
-      text-align:center;
-    }
-    .card:hover { transform:translateY(-5px); }
+    body { margin:0; font-family:'Poppins',sans-serif; background:#000; color:white; }
+    h1{font-size:50px; margin:0;} h2{font-size:32px; margin-bottom:20px;} h3{margin:10px 0;} p{color:#aaa; margin-top:10px;}
+    .hero{height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:15px; padding:0 20px;}
+    .btn{padding:12px 25px; background:linear-gradient(45deg,#7B2FFF,#00C2FF); border-radius:8px; text-decoration:none; color:white; transition:0.3s; box-shadow:0 0 10px #7B2FFF; display:inline-block;}
+    .btn:hover{transform:scale(1.05); box-shadow:0 0 15px #00C2FF;}
+    section{padding:60px 20px; text-align:center; background:#000;}
+    .dark{background:#000;}
+    .grid{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;}
+    .card{background:#111; padding:20px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer; text-align:center;}
+    .card:hover{transform:translateY(-5px);}
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Navbar -->
+  <!-- Include header.html content here -->
+  <header style="background:#000; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
+    <a href="index.html"><img src="logo2.png" alt="Tendoon Logo" style="height:60px;"></a>
+    <nav>
+      <a href="index.html" style="color:white; margin:0 10px; text-decoration:none;">Home</a>
+      <a href="services.html" style="color:white; margin:0 10px; text-decoration:none;">Services</a>
+      <a href="portfolio.html" style="color:white; margin:0 10px; text-decoration:none;">Portfolio</a>
+      <a href="about.html" style="color:white; margin:0 10px; text-decoration:none;">About</a>
+      <a href="contact.html" style="color:white; margin:0 10px; text-decoration:none;">Contact</a>
+    </nav>
+  </header>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <div class="hero">
-    <img src="logo2.png" alt="Tendoon Logo" style="width:550px; margin-bottom:15px;">
+    <img src="logo2.png" alt="Tendoon Logo" style="width:550px;">
     <h1>We Build AI-Powered Digital Experiences</h1>
     <p>Helping brands grow with AI, marketing & design</p>
-    <div style="display:flex; gap:15px; margin-top:20px; flex-wrap:wrap; justify-content:center;">
+    <div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center; margin-top:20px;">
       <a href="services.html" class="btn">Get Started</a>
       <a href="portfolio.html" class="btn">View Work</a>
-      <a href="contact.html" class="btn">Contact Now</a>
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- Services teaser -->
+  <section>
     <h2>Our Services</h2>
     <div class="grid">
-      <div class="card"><h3>Digital Marketing</h3><p>Social media, ads, SEO and growth strategies.</p></div>
-      <div class="card"><h3>Creative Design</h3><p>Branding, logos, UI/UX and visual identity.</p></div>
-      <div class="card"><h3>Web Development</h3><p>Modern websites and landing pages.</p></div>
-      <div class="card"><h3>Branding & Design</h3><p>Logo, visual identity & brand guidelines.</p></div>
+      <div class="card"><h3>Digital Marketing</h3></div>
+      <div class="card"><h3>Creative Design</h3></div>
+      <div class="card"><h3>Web Development</h3></div>
+      <div class="card"><h3>Branding & Design</h3></div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section id="why-us" class="dark">
-    <h2>Why Choose Us</h2>
-    <div class="grid">
-      <div class="card"><h3>Fast Delivery</h3></div>
-      <div class="card"><h3>AI Driven Work</h3></div>
-      <div class="card"><h3>Affordable Pricing</h3></div>
-      <div class="card"><h3>Creative Team</h3></div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
+  <!-- Portfolio teaser -->
+  <section class="dark">
     <h2>Our Portfolio</h2>
     <div class="grid">
-      <div class="card"><h3>Project 1</h3><p>Website redesign for a global brand</p></div>
-      <div class="card"><h3>Project 2</h3><p>Social media campaign for startup</p></div>
-      <div class="card"><h3>Project 3</h3><p>Branding & UI/UX design for ecommerce</p></div>
-      <div class="card"><h3>Project 4</h3><p>AI Automation tool for marketing</p></div>
+      <div class="card"><h3>Project 1</h3></div>
+      <div class="card"><h3>Project 2</h3></div>
+      <div class="card"><h3>Project 3</h3></div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="dark">
-    <h2>What People Say</h2>
-    <div class="grid">
-      <div class="card"><p>"Tendoon transformed our brand in just 3 months! Highly recommend."</p><h4>- John Doe</h4></div>
-      <div class="card"><p>"Creative, fast, and professional. Amazing team!"</p><h4>- Jane Smith</h4></div>
-      <div class="card"><p>"Their AI-driven strategies boosted our sales significantly."</p><h4>- Alex Johnson</h4></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="dark">
-    <h2>About Tendoon</h2>
-    <p style="max-width:700px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">
-      <p>Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.</p>
-    </p>
-    <div class="grid">
-      <div class="card"><h3>Strategy + Creativity</h3></div>
-      <div class="card"><h3>Global Quality</h3></div>
-      <div class="card"><h3>Fast Delivery</h3></div>
-      <div class="card"><h3>ROI Focused</h3></div>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta">
+  <!-- CTA -->
+  <section>
     <h2>Let’s Build Something Amazing Together</h2>
     <a href="contact.html" class="btn">Contact Now</a>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section id="contact" class="dark">
-    <h2>Contact Us</h2>
-    <p style="max-width:600px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">
-      <p>Reach out and let’s start your project today!</p>
-    </p>
-    <form style="max-width:400px; margin:auto; display:flex; flex-direction:column; gap:12px;">
-      <input type="text" placeholder="Your Name" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
-      <input type="email" placeholder="Your Email" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
-      <textarea placeholder="Your Message" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white; min-height:100px;"></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p style="margin-top:15px; color:#aaa;">Or WhatsApp us directly: <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a></p>
-  </section>
+  <!-- Footer -->
+  <footer style="background:#111; color:#aaa; text-align:center; padding:25px 20px;">
+    <p>&copy; 2026 Tendoon. All rights reserved.</p>
+    <p>Or WhatsApp us directly: <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a></p>
+  </footer>
 
 </body>
 </html>
+<footer style="background:#111; color:#aaa; text-align:center; padding:25px 20px;">
+  <p>&copy; 2026 Tendoon. All rights reserved.</p>
+  <p>Or WhatsApp us directly: <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a></p>
+</footer>
