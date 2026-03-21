@@ -1,307 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Tendoon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Premium Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #000000; /* Pure black background */
+      background: #000;
       color: white;
     }
+
+    h1 { font-size:50px; margin:0; }
+    h2 { font-size:32px; margin-bottom:20px; }
+    h3 { margin:10px 0; }
+    p { color:#aaa; margin-top:10px; }
 
     .hero {
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      background: #000000; /* Pure black hero background */
-    }
-
-    h1 {
-      font-size: 50px;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    p {
-      color: #aaa;
-      margin-top: 10px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:#000;
+      gap:15px;
+      padding:0 20px;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, #7B2FFF, #00C2FF);
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #7B2FFF;
+      padding:12px 25px;
+      background:linear-gradient(45deg,#7B2FFF,#00C2FF);
+      border-radius:8px;
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      box-shadow:0 0 10px #7B2FFF;
+      display:inline-block;
     }
-
     .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00C2FF;
-    }
-
-    .card {
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 0 10px rgba(123,47,255,0.3);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      transform:scale(1.05);
+      box-shadow:0 0 15px #00C2FF;
     }
 
     section {
-      padding: 60px 20px;
-      text-align: center;
-      background: #000000; /* Pure black background for sections */
+      padding:60px 20px;
+      text-align:center;
+      background:#000;
     }
 
-    .dark {
-      background: #000000; /* Dark sections also pure black */
-    }
+    .dark { background:#000; }
 
     .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      margin-top:30px;
     }
+
+    .card {
+      background:#111;
+      padding:20px;
+      border-radius:10px;
+      width:250px;
+      box-shadow:0 0 10px rgba(123,47,255,0.3);
+      transition:0.3s;
+      cursor:pointer;
+      text-align:center;
+    }
+    .card:hover { transform:translateY(-5px); }
   </style>
 </head>
 <body>
-  
-  <!-- HERO -->
-<div class="hero">
-  <img src="logo2.png" alt="Tendoon Logo" style="width:550px; margin-bottom:15px;">
-  <h1 style="margin:0;">We Build AI-Powered Digital Experiences</h1>
-  <p style="color:#aaa; margin:10px 0 20px 0;">Helping brands grow with AI, marketing & design</p>
 
-  <!-- Buttons Wrapper -->
-  <div style="display:flex; gap:15px; margin-top:20px;">
-    <a href="#services" class="btn">Get Started</a>
-    <a href="#work" class="btn">View Work</a>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="logo2.png" alt="Tendoon Logo" style="width:300px; margin-bottom:15px;">
+    <h1>We Build AI-Powered Digital Experiences</h1>
+    <p>Helping brands grow with AI, marketing & design</p>
+    <div style="display:flex; gap:15px; margin-top:20px; flex-wrap:wrap; justify-content:center;">
+      <a href="#services" class="btn">Get Started</a>
+      <a href="#work" class="btn">View Work</a>
+    </div>
   </div>
-</div>
 
   <!-- SERVICES -->
-  <section id="services" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:30px;">Our Services</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; box-shadow:0 0 15px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 15px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px;">Digital Marketing</h3>
-      <p style="color:#aaa;">Social media, ads, SEO and growth strategies.</p>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Digital Marketing</h3><p>Social media, ads, SEO and growth strategies.</p></div>
+      <div class="card"><h3>Creative Design</h3><p>Branding, logos, UI/UX and visual identity.</p></div>
+      <div class="card"><h3>Web Development</h3><p>Modern websites and landing pages.</p></div>
+      <div class="card"><h3>Branding & Design</h3><p>Logo, visual identity & brand guidelines.</p></div>
     </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; box-shadow:0 0 15px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 15px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px;">Creative Design</h3>
-      <p style="color:#aaa;">Branding, logos, UI/UX and visual identity.</p>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; box-shadow:0 0 15px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 15px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px;">Web Development</h3>
-      <p style="color:#aaa;">Modern websites and landing pages.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- WHY CHOOSE US -->
-<section id="why-us" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:30px;">Why Choose Us</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-
-    <div class="card" style="width:220px;">
-      <h3>Fast Delivery</h3>
+  <section id="why-us" class="dark">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+      <div class="card"><h3>Fast Delivery</h3></div>
+      <div class="card"><h3>AI Driven Work</h3></div>
+      <div class="card"><h3>Affordable Pricing</h3></div>
+      <div class="card"><h3>Creative Team</h3></div>
     </div>
-
-    <div class="card" style="width:220px;">
-      <h3>AI Driven Work</h3>
-    </div>
-
-    <div class="card" style="width:220px;">
-      <h3>Affordable Pricing</h3>
-    </div>
-
-    <div class="card" style="width:220px;">
-      <h3>Creative Team</h3>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- PORTFOLIO -->
-<section id="portfolio" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:30px;">Our Portfolio</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Project 1</h3>
-      <p>Website redesign for a global brand</p>
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="grid">
+      <div class="card"><h3>Project 1</h3><p>Website redesign for a global brand</p></div>
+      <div class="card"><h3>Project 2</h3><p>Social media campaign for startup</p></div>
+      <div class="card"><h3>Project 3</h3><p>Branding & UI/UX design for ecommerce</p></div>
+      <div class="card"><h3>Project 4</h3><p>AI Automation tool for marketing</p></div>
     </div>
-
-    <div class="card">
-      <h3>Project 2</h3>
-      <p>Social media campaign for startup</p>
-    </div>
-
-    <div class="card">
-      <h3>Project 3</h3>
-      <p>Branding & UI/UX design for ecommerce</p>
-    </div>
-
-    <div class="card">
-      <h3>Project 4</h3>
-      <p>AI Automation tool for marketing</p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- TESTIMONIALS -->
-<section id="testimonials" class="dark" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:30px;">What People Say</h2>
-  <div class="grid">
-
-    <div class="card">
-      <p>"Tendoon transformed our brand in just 3 months! Highly recommend."</p>
-      <h4>- John Doe</h4>
+  <section id="testimonials" class="dark">
+    <h2>What People Say</h2>
+    <div class="grid">
+      <div class="card"><p>"Tendoon transformed our brand in just 3 months! Highly recommend."</p><h4>- John Doe</h4></div>
+      <div class="card"><p>"Creative, fast, and professional. Amazing team!"</p><h4>- Jane Smith</h4></div>
+      <div class="card"><p>"Their AI-driven strategies boosted our sales significantly."</p><h4>- Alex Johnson</h4></div>
     </div>
-
-    <div class="card">
-      <p>"Creative, fast, and professional. Amazing team!"</p>
-      <h4>- Jane Smith</h4>
-    </div>
-
-    <div class="card">
-      <p>"Their AI-driven strategies boosted our sales significantly."</p>
-      <h4>- Alex Johnson</h4>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- ABOUT -->
-  <section class="dark" style="padding:60px 20px; background:#000;">
-  <h2 style="font-size:32px; margin-bottom:20px;">About Tendoon</h2>
-  <p style="max-width:700px; margin:0 auto 30px auto; color:#aaa; line-height:1.6;">
-    Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.
-  </p>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-    
-    <div style="background:#111; padding:25px; border-radius:10px; width:220px; text-align:center; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 0 15px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin:10px 0;">Strategy + Creativity</h3>
+  <section class="dark">
+    <h2>About Tendoon</h2>
+    <p style="max-width:700px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">
+      Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.
+    </p>
+    <div class="grid">
+      <div class="card"><h3>Strategy + Creativity</h3></div>
+      <div class="card"><h3>Global Quality</h3></div>
+      <div class="card"><h3>Fast Delivery</h3></div>
+      <div class="card"><h3>ROI Focused</h3></div>
     </div>
-
-    <div style="background:#111; padding:25px; border-radius:10px; width:220px; text-align:center; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 0 15px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin:10px 0;">Global Quality</h3>
-    </div>
-
-    <div style="background:#111; padding:25px; border-radius:10px; width:220px; text-align:center; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 0 15px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin:10px 0;">Fast Delivery</h3>
-    </div>
-
-    <div style="background:#111; padding:25px; border-radius:10px; width:220px; text-align:center; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 0 15px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin:10px 0;">ROI Focused</h3>
-    </div>
-
-  </div>
-</section>
-
-  <!-- WORK -->
-  <section id="work" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:30px; text-align:center;">Our Work</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; color:#aaa; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.03)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px; color:white;">Project 1</h3>
-      <p>Website redesign for a global brand</p>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; color:#aaa; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.03)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px; color:white;">Project 2</h3>
-      <p>Social media campaign for startup</p>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px; text-align:center; color:#aaa; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-5px) scale(1.03)'; this.style.boxShadow='0 0 20px #7B2FFF';"
-         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 10px rgba(123,47,255,0.3)';">
-      <h3 style="margin-bottom:10px; color:white;">Project 3</h3>
-      <p>Branding & UI/UX design for ecommerce</p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" style="padding:60px 20px; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:20px;">Let’s Build Something Amazing Together</h2>
-  <a href="#contact" style="padding:14px 25px; background:linear-gradient(45deg,#7B2FFF,#00C2FF); color:white; border-radius:6px; text-decoration:none; transition:0.3s; display:inline-block;"
-     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 15px #00C2FF';"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-    Contact Now
-  </a>
-</section>
+  <section id="contact-cta">
+    <h2>Let’s Build Something Amazing Together</h2>
+    <a href="#contact" class="btn">Contact Now</a>
+  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="dark" style="padding:60px 20px; background:#000; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:15px;">Contact Us</h2>
-  <p style="color:#aaa; max-width:600px; margin:0 auto 30px auto; line-height:1.6;">
-    Let’s build something amazing together
-  </p>
+  <!-- CONTACT FORM -->
+  <section id="contact" class="dark">
+    <h2>Contact Us</h2>
+    <p style="max-width:600px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">Reach out and let’s start your project today!</p>
+    <form style="max-width:400px; margin:auto; display:flex; flex-direction:column; gap:12px;">
+      <input type="text" placeholder="Your Name" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
+      <input type="email" placeholder="Your Email" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
+      <textarea placeholder="Your Message" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white; min-height:100px;"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p style="margin-top:15px; color:#aaa;">Or WhatsApp us directly: <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a></p>
+  </section>
 
-  <!-- Contact Form -->
-  <form style="max-width:400px; margin:0 auto 20px auto; display:flex; flex-direction:column; gap:12px;">
-    <input type="text" placeholder="Your Name" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
-    <input type="email" placeholder="Your Email" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
-    <textarea placeholder="Your Message" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white; min-height:100px;"></textarea>
-    <button type="submit" style="padding:14px; background:linear-gradient(45deg,#7B2FFF,#00C2FF); color:white; border:none; border-radius:6px; cursor:pointer; transition:0.3s;"
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 15px #00C2FF';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-      Send Message
-    </button>
-  </form>
-
-  <!-- WhatsApp Link -->
-  <p style="margin-top:15px; color:#aaa;">
-    Or WhatsApp us directly: 
-    <a href="https://wa.me/919004230084" style="color:#00C2FF; text-decoration:none;">Click here</a>
-  </p>
-</section>
 </body>
 </html>
