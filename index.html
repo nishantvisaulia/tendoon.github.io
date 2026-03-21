@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #0B0B0B);
+      background: #000000; /* Pure black background */
       color: white;
     }
 
@@ -22,6 +22,7 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
+      background: #000000; /* Pure black hero background */
     }
 
     h1 {
@@ -70,10 +71,11 @@
     section {
       padding: 60px 20px;
       text-align: center;
+      background: #000000; /* Pure black background for sections */
     }
 
     .dark {
-      background: #0f0f0f;
+      background: #000000; /* Dark sections also pure black */
     }
 
     .grid {
@@ -83,99 +85,75 @@
       gap: 20px;
       margin-top: 30px;
     }
-
   </style>
 </head>
-
 <body>
-
-<!-- HERO -->
-<div class="hero">
-  <img src="logo1.png" style="width:140px; margin-bottom:20px; filter: drop-shadow(0 0 10px #7B2FFF);">
-
-  <h1>Innovate. Connect. Evolve.</h1>
-  <p>We Build Brands That Scale Globally</p>
-
-  <a href="#" class="btn">Get Started</a>
-</div>
-
-<!-- SERVICES -->
-<section>
-  <h2>Our Services</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Digital Marketing</h3>
-      <p>Social media, ads, SEO and growth strategies.</p>
-    </div>
-
-    <div class="card">
-      <h3>Creative Design</h3>
-      <p>Branding, logos, UI/UX and visual identity.</p>
-    </div>
-
-    <div class="card">
-      <h3>Web Development</h3>
-      <p>Modern websites and landing pages.</p>
-    </div>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="logo.png" alt="Tendoon Logo" style="width:120px; margin-bottom:20px;">
+    <h1>Innovate. Connect. Evolve.</h1>
+    <p>We Build Brands That Scale Globally</p>
+    <a href="#" class="btn">Get Started</a>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section class="dark">
-  <h2>About Tendoon</h2>
-  <p style="max-width:700px; margin:auto;">
-    Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences.
-    We combine strategy, design, and technology to help businesses grow faster.
-  </p>
+  <!-- SERVICES -->
+  <section>
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>Social media, ads, SEO and growth strategies.</p>
+      </div>
+      <div class="card">
+        <h3>Creative Design</h3>
+        <p>Branding, logos, UI/UX and visual identity.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Modern websites and landing pages.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="grid">
-    <div class="card"><h3>Strategy + Creativity</h3></div>
-    <div class="card"><h3>Global Quality</h3></div>
-    <div class="card"><h3>Fast Delivery</h3></div>
-    <div class="card"><h3>ROI Focused</h3></div>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section class="dark">
+    <h2>About Tendoon</h2>
+    <p style="max-width:700px; margin:auto;">
+      Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.
+    </p>
+    <div class="grid">
+      <div class="card"><h3>Strategy + Creativity</h3></div>
+      <div class="card"><h3>Global Quality</h3></div>
+      <div class="card"><h3>Fast Delivery</h3></div>
+      <div class="card"><h3>ROI Focused</h3></div>
+    </div>
+  </section>
 
-<!-- WORK -->
-<section>
-  <h2>Our Work</h2>
+  <!-- WORK -->
+  <section>
+    <h2>Our Work</h2>
+    <div class="grid">
+      <div class="card"><p>Project 1</p></div>
+      <div class="card"><p>Project 2</p></div>
+      <div class="card"><p>Project 3</p></div>
+    </div>
+  </section>
 
-  <div class="grid">
-    <div class="card"><p>Project 1</p></div>
-    <div class="card"><p>Project 2</p></div>
-    <div class="card"><p>Project 3</p></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="dark">
-  <h2>Contact Us</h2>
-  <p>Let’s build something amazing together</p>
-
-  <form style="max-width:400px; margin:30px auto; display:flex; flex-direction:column; gap:15px;">
-    
-    <input type="text" placeholder="Your Name" required 
-    style="padding:10px; border:none; border-radius:5px;">
-    
-    <input type="email" placeholder="Your Email" required 
-    style="padding:10px; border:none; border-radius:5px;">
-    
-    <textarea placeholder="Your Message" required 
-    style="padding:10px; border:none; border-radius:5px;"></textarea>
-    
-    <button type="submit" 
-    style="padding:12px; background:#7B2FFF; color:white; border:none; border-radius:5px;">
-      Send Message
-    </button>
-
-  </form>
-
-  <p style="margin-top:20px;">
-    Or WhatsApp us directly: 
-    <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a>
-  </p>
-</section>
-
+  <!-- CONTACT -->
+  <section class="dark">
+    <h2>Contact Us</h2>
+    <p>Let’s build something amazing together</p>
+    <form style="max-width:400px; margin:30px auto; display:flex; flex-direction:column; gap:15px;">
+      <input type="text" placeholder="Your Name" required style="padding:10px; border:none; border-radius:5px;">
+      <input type="email" placeholder="Your Email" required style="padding:10px; border:none; border-radius:5px;">
+      <textarea placeholder="Your Message" required style="padding:10px; border:none; border-radius:5px;"></textarea>
+      <button type="submit" style="padding:12px; background:#7B2FFF; color:white; border:none; border-radius:5px;">
+        Send Message
+      </button>
+    </form>
+    <p style="margin-top:20px;">
+      Or WhatsApp us directly: <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a>
+    </p>
+  </section>
 </body>
 </html>
