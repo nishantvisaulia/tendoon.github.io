@@ -3,12 +3,15 @@
 <head>
   <title>Tendoon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <!-- Premium Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0B0B0B;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #0B0B0B);
       color: white;
     }
 
@@ -26,6 +29,10 @@
       margin: 0;
     }
 
+    h2 {
+      font-size: 32px;
+    }
+
     p {
       color: #aaa;
       margin-top: 10px;
@@ -34,97 +41,117 @@
     .btn {
       margin-top: 20px;
       padding: 12px 25px;
-      background: #7B2FFF;
+      background: linear-gradient(45deg, #7B2FFF, #00C2FF);
       border-radius: 8px;
       text-decoration: none;
       color: white;
       transition: 0.3s;
+      box-shadow: 0 0 10px #7B2FFF;
     }
 
     .btn:hover {
-      background: #00C2FF;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00C2FF;
     }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(123,47,255,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .dark {
+      background: #0f0f0f;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
+  <img src="logo.png" alt="Tendoon Logo" style="width:120px; margin-bottom:20px;">
+
   <h1>Innovate. Connect. Evolve.</h1>
   <p>We Build Brands That Scale Globally</p>
+
   <a href="#" class="btn">Get Started</a>
 </div>
-<section style="padding: 60px 20px; text-align:center;">
+
+<!-- SERVICES -->
+<section>
   <h2>Our Services</h2>
-  
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
-    
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px;">
+
+  <div class="grid">
+    <div class="card">
       <h3>Digital Marketing</h3>
       <p>Social media, ads, SEO and growth strategies.</p>
     </div>
 
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px;">
+    <div class="card">
       <h3>Creative Design</h3>
       <p>Branding, logos, UI/UX and visual identity.</p>
     </div>
 
-    <div style="background:#111; padding:20px; border-radius:10px; width:250px;">
+    <div class="card">
       <h3>Web Development</h3>
       <p>Modern websites and landing pages.</p>
     </div>
-
   </div>
 </section>
-<section style="padding: 60px 20px; text-align:center; background:#0f0f0f;">
+
+<!-- ABOUT -->
+<section class="dark">
   <h2>About Tendoon</h2>
-  <p style="max-width:700px; margin:auto; margin-top:15px; color:#aaa;">
-    Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. 
+  <p style="max-width:700px; margin:auto;">
+    Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences.
     We combine strategy, design, and technology to help businesses grow faster.
   </p>
 
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px;">
-    
-    <div style="background:#111; padding:20px; border-radius:10px; width:220px;">
-      <h3>Strategy + Creativity</h3>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:220px;">
-      <h3>Global Quality</h3>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:220px;">
-      <h3>Fast Delivery</h3>
-    </div>
-
-    <div style="background:#111; padding:20px; border-radius:10px; width:220px;">
-      <h3>ROI Focused</h3>
-    </div>
-
+  <div class="grid">
+    <div class="card"><h3>Strategy + Creativity</h3></div>
+    <div class="card"><h3>Global Quality</h3></div>
+    <div class="card"><h3>Fast Delivery</h3></div>
+    <div class="card"><h3>ROI Focused</h3></div>
   </div>
 </section>
-<section style="padding: 60px 20px; text-align:center;">
+
+<!-- WORK -->
+<section>
   <h2>Our Work</h2>
 
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
-
-    <div style="background:#111; width:250px; height:150px; border-radius:10px; display:flex; align-items:center; justify-content:center;">
-      <p>Project 1</p>
-    </div>
-
-    <div style="background:#111; width:250px; height:150px; border-radius:10px; display:flex; align-items:center; justify-content:center;">
-      <p>Project 2</p>
-    </div>
-
-    <div style="background:#111; width:250px; height:150px; border-radius:10px; display:flex; align-items:center; justify-content:center;">
-      <p>Project 3</p>
-    </div>
-
+  <div class="grid">
+    <div class="card"><p>Project 1</p></div>
+    <div class="card"><p>Project 2</p></div>
+    <div class="card"><p>Project 3</p></div>
   </div>
 </section>
-<section style="padding: 60px 20px; text-align:center; background:#0f0f0f;">
+
+<!-- CONTACT -->
+<section class="dark">
   <h2>Contact Us</h2>
-  <p style="color:#aaa;">Let’s build something amazing together</p>
+  <p>Let’s build something amazing together</p>
 
   <form style="max-width:400px; margin:30px auto; display:flex; flex-direction:column; gap:15px;">
     
@@ -143,10 +170,11 @@
     </button>
 
   </form>
-<p style="margin-top:20px;">
-  Or WhatsApp us directly: 
-  <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a>
-</p>
+
+  <p style="margin-top:20px;">
+    Or WhatsApp us directly: 
+    <a href="https://wa.me/919004230084" style="color:#00C2FF;">Click here</a>
+  </p>
 </section>
 
 </body>
