@@ -21,6 +21,25 @@
     h3 { margin:10px 0; }
     p { color:#aaa; margin-top:10px; }
 
+    /* NAVBAR */
+    nav {
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      padding:20px;
+      background:#111;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    nav a {
+      text-decoration:none;
+      color:white;
+      font-weight:600;
+      transition:0.3s;
+    }
+    nav a:hover { color:#7B2FFF; }
+
     .hero {
       height: 100vh;
       display:flex;
@@ -79,14 +98,24 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <!-- HERO -->
   <div class="hero">
     <img src="logo2.png" alt="Tendoon Logo" style="width:550px; margin-bottom:15px;">
     <h1>We Build AI-Powered Digital Experiences</h1>
     <p>Helping brands grow with AI, marketing & design</p>
     <div style="display:flex; gap:15px; margin-top:20px; flex-wrap:wrap; justify-content:center;">
-      <a href="#services" class="btn">Get Started</a>
-      <a href="#work" class="btn">View Work</a>
+      <a href="services.html" class="btn">Get Started</a>
+      <a href="portfolio.html" class="btn">View Work</a>
+      <a href="contact.html" class="btn">Contact Now</a>
     </div>
   </div>
 
@@ -137,7 +166,7 @@
   <section class="dark">
     <h2>About Tendoon</h2>
     <p style="max-width:700px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">
-    <p>Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.</p>
+      Tendoon is a global digital marketing and creative design agency focused on building powerful brand experiences. We combine strategy, design, and technology to help businesses grow faster.
     </p>
     <div class="grid">
       <div class="card"><h3>Strategy + Creativity</h3></div>
@@ -150,14 +179,15 @@
   <!-- CONTACT CTA -->
   <section id="contact-cta">
     <h2>Let’s Build Something Amazing Together</h2>
-    <a href="#contact" class="btn">Contact Now</a>
+    <a href="contact.html" class="btn">Contact Now</a>
   </section>
 
   <!-- CONTACT FORM -->
   <section id="contact" class="dark">
     <h2>Contact Us</h2>
     <p style="max-width:600px; margin:auto 0 30px 0; color:#aaa; line-height:1.6;">
-      <p>Reach out and let’s start your project today!</p>
+      Reach out and let’s start your project today!
+    </p>
     <form style="max-width:400px; margin:auto; display:flex; flex-direction:column; gap:12px;">
       <input type="text" placeholder="Your Name" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
       <input type="email" placeholder="Your Email" required style="padding:12px; border:none; border-radius:6px; background:#111; color:white;">
