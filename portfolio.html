@@ -5,27 +5,104 @@
   <title>Tendoon - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
-    body { margin:0; font-family:'Poppins',sans-serif; background:#000; color:white; }
-    h1{font-size:50px;} h2{font-size:32px;} h3{margin:10px 0;} p{color:#aaa;}
-    section{padding:60px 20px; text-align:center;}
-    .grid{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;}
-    .card{background:#111; padding:20px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(123,47,255,0.3); transition:0.3s;}
-    .card:hover{transform:translateY(-5px); box-shadow:0 0 15px #7B2FFF;}
-    .btn{padding:12px 25px; background:linear-gradient(45deg,#7B2FFF,#00C2FF); border-radius:8px; text-decoration:none; color:white;}
+    body { 
+      margin:0; 
+      font-family:'Poppins',sans-serif; 
+      background:#000; 
+      color:white; 
+    }
+
+    h1 { font-size:50px; margin:0; } 
+    h2 { font-size:32px; } 
+    h3 { margin:10px 0; } 
+    p { color:#aaa; }
+
+    /* HEADER */
+    header { 
+      background:#000; 
+      padding:15px 20px; 
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+    }
+
+    nav a { 
+      color:white; 
+      margin:0 10px; 
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover {
+      color:#00C2FF;
+    }
+
+    section { 
+      padding:60px 20px; 
+      text-align:center; 
+    }
+
+    .grid { 
+      display:flex; 
+      flex-wrap:wrap; 
+      justify-content:center; 
+      gap:20px; 
+      margin-top:30px; 
+    }
+
+    .card { 
+      background:#111; 
+      padding:20px; 
+      border-radius:10px; 
+      width:250px; 
+      box-shadow:0 0 10px rgba(123,47,255,0.3); 
+      transition:0.3s;
+    }
+
+    .card:hover { 
+      transform:translateY(-5px); 
+      box-shadow:0 0 15px #7B2FFF;
+    }
+
+    .btn { 
+      padding:12px 25px; 
+      background:linear-gradient(45deg,#7B2FFF,#00C2FF); 
+      border-radius:8px; 
+      text-decoration:none; 
+      color:white; 
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover {
+      transform:scale(1.05);
+      box-shadow:0 0 15px #00C2FF;
+    }
+
+    footer { 
+      background:#111; 
+      color:#aaa; 
+      text-align:center; 
+      padding:25px; 
+    }
   </style>
 </head>
+
 <body>
 
 <!-- HEADER -->
-<header style="background:#000; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
-  <a href="index.html"><img src="logo2.png" style="height:60px;"></a>
+<header>
+  <a href="index.html">
+    <img src="logo2.png" alt="Tendoon Logo" style="height:60px;">
+  </a>
   <nav>
-    <a href="index.html" style="color:white; margin:0 10px;">Home</a>
-    <a href="services.html" style="color:white; margin:0 10px;">Services</a>
-    <a href="portfolio.html" style="color:white; margin:0 10px;">Portfolio</a>
-    <a href="about.html" style="color:white; margin:0 10px;">About</a>
-    <a href="contact.html" style="color:white; margin:0 10px;">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
@@ -54,7 +131,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#111; color:#aaa; text-align:center; padding:25px;">
+<footer>
   <p>&copy; 2026 Tendoon</p>
 </footer>
 
