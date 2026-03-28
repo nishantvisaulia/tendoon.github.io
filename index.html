@@ -75,11 +75,6 @@
     text-decoration: none;
   }
 
-  .logo img {
-  height: 50px; 
-  transition: var(--transition);
-  animation: float 3s ease-in-out infinite;
-}
   .logo span { color: var(--accent); }
   .logo-img-link { text-decoration: none; display: flex; align-items: center; }
   .nav-logo-img { height: 44px; width: auto; object-fit: contain; }
@@ -103,23 +98,6 @@
     transition: background 0.3s, color 0.3s !important;
   }
   .nav-cta:hover { background: var(--accent2) !important; color: var(--white) !important; }
-
-  /* CURSOR LE JANE PAR: Line White aayegi */
-.nav-link:hover::after {
-  width: 100%;
-  background: #ffffff; /* White line on hover */
-}
-
-/* SELECT / ACTIVE HONE PAR: Colour Purple ho jayega */
-.nav-link.active {
-  color: var(--primary); /* Text purple */
-  opacity: 1;
-}
-
-.nav-link.active::after {
-  width: 100%;
-  background: var(--primary); /* Line purple only when active */
-}
 
   /* HERO */
   #hero {
