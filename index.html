@@ -25,7 +25,7 @@
   --accent3: #6D28D9;
   --gray: #FFFFFF;       /* sections */
   --gray2: #E5E7EB;      /* FIXED: darker than before */
-  --text-muted: #374151; /* FIXED: readable grey */
+  --text-muted: #1F2937; /* FIXED: readable grey */
 }
   body {
   transition: background 0.3s, color 0.3s;
@@ -639,6 +639,12 @@ body.light-mode #themeToggle::before {
   transition: 0.3s;
 }
 
+    .payment-icons img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
 .payment-icons img:hover {
   transform: scale(1.1);
 }
@@ -1200,12 +1206,12 @@ body.light-mode #themeToggle::before {
 <!-- PAYMENT OPTIONS -->
 <section class="payments">
   <h3>Payment Options</h3>
-  <div class="payment-icons">
-    <img src="https://img.icons8.com/color/48/visa.png"/>
-    <img src="https://img.icons8.com/color/48/mastercard.png"/>
-    <img src="https://img.icons8.com/color/48/paypal.png"/>
-    <img src="https://img.icons8.com/color/48/upi.png"/>
-  </div>
+<div class="payment-icons">
+  <img src="https://img.icons8.com/color/48/visa.png"/>
+  <img src="https://img.icons8.com/color/48/mastercard.png"/>
+  <img src="https://img.icons8.com/color/48/paypal.png"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Unified_Payments_Interface_logo.svg/512px-Unified_Payments_Interface_logo.svg.png"/>
+</div>
 </section>
 
 <!-- CTA -->
@@ -1257,11 +1263,11 @@ body.light-mode #themeToggle::before {
 
   <!-- Country Flag -->
   <div class="countries">
-  <span title="USA">🇺🇸</span>
-  <span title="UK">🇬🇧</span>
-  <span title="UAE">🇦🇪</span>
-  <span title="India">🇮🇳</span>
-  </div>
+  <img src="https://flagcdn.com/w40/us.png" alt="USA">
+  <img src="https://flagcdn.com/w40/gb.png" alt="UK">
+  <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+  <img src="https://flagcdn.com/w40/in.png" alt="India">
+</div>
     
     <div class="social-links">
       <!-- Facebook -->
