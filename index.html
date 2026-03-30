@@ -25,7 +25,7 @@
   --accent3: #6D28D9;
   --gray: #FFFFFF;       /* sections */
   --gray2: #E5E7EB;      /* FIXED: darker than before */
-  --text-muted: #0B0B0F; /* FIXED: readable grey */
+  --text-muted: #374151; /* FIXED: readable grey */
 }
   body {
   transition: background 0.3s, color 0.3s;
@@ -575,6 +575,107 @@ body.light-mode #themeToggle::before {
   .testi-info strong { display: block; font-size: 14px; }
   .testi-info span { font-size: 12px; color: var(--text-muted); }
 
+ 
+ /* ================= LIGHT MODE FIX ================= */
+body.light-mode #testimonials {
+  background: #F3F4F6;
+}
+
+body.light-mode .testi-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+}
+
+body.light-mode .testi-text {
+  color: #111827;
+}
+
+body.light-mode .testi-info strong {
+  color: #111827;
+}
+
+body.light-mode .testi-info span {
+  color: #374151;
+}
+
+/* Quote */
+.testi-card::before {
+  content: '"';
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  color: rgba(139,92,246,0.15);
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  line-height: 1;
+}
+
+/* Text FIXED */
+.testi-text {
+  font-size: 15px;
+  color: var(--white); /* FIXED */
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Author */
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Avatar */
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent3), var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+/* Name */
+.testi-info strong {
+  display: block;
+  font-size: 14px;
+  color: var(--white);
+}
+
+/* Role */
+.testi-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ================= LIGHT MODE FIX ================= */
+
+body.light-mode #testimonials {
+  background: #F3F4F6;
+}
+
+body.light-mode .testi-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+}
+
+body.light-mode .testi-text {
+  color: #111827;
+}
+
+body.light-mode .testi-info strong {
+  color: #111827;
+}
+
+body.light-mode .testi-info span {
+  color: #374151;
+}
+
   /* PRICING */
   #pricing { background: var(--black); }
   .pricing-grid {
@@ -613,11 +714,28 @@ body.light-mode #themeToggle::before {
   .pricing-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 36px; }
   .pricing-features { list-style: none; margin-bottom: 36px; }
   .pricing-features li {
-    font-size: 14px; color: rgba(245,244,240,0.7);
-    padding: 10px 0; border-bottom: 1px solid var(--gray2);
-    display: flex; gap: 10px; align-items: center;
-  }
+  font-size: 14px; color: var(--text-muted); /* FIXED */
+  padding: 10px 0; border-bottom: 1px solid var(--gray2);
+  display: flex; gap: 10px; align-items: center;
+}
   .pricing-features li::before { content: '✓'; color: var(--accent); font-size: 12px; flex-shrink: 0; }
+
+  body.light-mode #pricing {
+  background: #F3F4F6;
+}
+  body.light-mode .pricing-card.featured {
+  background: linear-gradient(180deg, rgba(139,92,246,0.1) 0%, #ffffff 40%);
+}
+  body.light-mode #pricing {
+  background: #F3F4F6;
+}
+body.light-mode .pricing-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+}
+body.light-mode .pricing-card.featured {
+  background: linear-gradient(180deg, rgba(139,92,246,0.1) 0%, #ffffff 40%);
+}
 
 
   /* PAYMENT OPTIONS */
