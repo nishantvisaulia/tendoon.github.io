@@ -92,6 +92,28 @@
   .logo span { color: var(--accent); }
   .logo-img-link { text-decoration: none; display: flex; align-items: center; }
   .nav-logo-img { height: 44px; width: auto; object-fit: contain; }
+
+  /* ===== LOGO HOVER EFFECT ===== */
+  /* Text logo */
+  .logo {
+    transition: all 0.3s ease;
+  }
+  .logo:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 8px var(--accent);
+  }
+  /* Image logo */
+  .nav-logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  .logo-img-link:hover .nav-logo-img {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 6px var(--accent));
+  }
+  
   nav ul { list-style: none; display: flex; gap: 40px; }
   nav ul a {
     font-family: 'Space Mono', monospace;
