@@ -368,55 +368,55 @@
     margin-bottom: 20px;
   }
 
-/* DAY/NIGHT TOGGLE */ 
-#themeToggle {
-  background: var(--gray2);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 6px;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  width: 52px;
-  height: 28px;
-  position: relative;
-  transition: all 0.3s ease;
-}
+  /* DAY/NIGHT TOGGLE */ 
+  #themeToggle {
+    background: var(--gray2);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 6px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 52px;
+    height: 28px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
 
- #themeToggle::before {
-  content: "🌙";  /* DARK MODE ICON */
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 3px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  transition: all 0.3s ease;
-}
+   #themeToggle::before {
+    content: "🌙";  /* DARK MODE ICON */
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: all 0.3s ease;
+  }
 
-/* Light mode active */
-body.light-mode #themeToggle::before {
-  left: 27px;
-  content: "☀️";
-  background: var(--accent2);
-}
+  /* Light mode active */
+  body.light-mode #themeToggle::before {
+    left: 27px;
+    content: "☀️";
+    background: var(--accent2);
+  }
 
-/* EXTRA FIX: ensure no overlap ghost effect */
-#themeToggle::after {
-  content: "";
-  display: none;
-}
+  /* EXTRA FIX: ensure no overlap ghost effect */
+  #themeToggle::after {
+    content: "";
+    display: none;
+  }
 
-/* Hover effect */
-#themeToggle:hover {
-  box-shadow: 0 0 10px var(--accent);
-}
+  /* Hover effect */
+  #themeToggle:hover {
+    box-shadow: 0 0 10px var(--accent);
+  }
   /* DAY/NIGHT TOGGLE END HERE */ 
 
    /* SERVICES */
@@ -650,26 +650,25 @@ body.light-mode #themeToggle::before {
 
  
  /* ================= LIGHT MODE FIX ================= */
-body.light-mode #testimonials {
-  background: #F3F4F6;
-}
-
-body.light-mode .testi-card {
-  background: #ffffff;
-  border: 1px solid #E5E7EB;
-}
-
-body.light-mode .testi-text {
-  color: #111827;
-}
-
-body.light-mode .testi-info strong {
-  color: #111827;
-}
-
-body.light-mode .testi-info span {
-  color: #374151;
-}
+  body.light-mode #testimonials {
+    background: #F3F4F6;
+  }
+  body.light-mode .testi-card {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+  }
+  body.light-mode .testi-text {
+    color: #111827;
+  }
+  body.light-mode .testi-info strong {
+    color: #111827;
+  }
+  body.light-mode nav ul a.active {
+    color: var(--accent) !important;
+  }
+  body.light-mode .testi-info span {
+    color: #374151;
+  }
 
 /* Quote */
 .testi-card::before {
