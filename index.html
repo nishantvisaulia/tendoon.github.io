@@ -383,9 +383,8 @@
   transition: all 0.3s ease;
 }
 
-/* Toggle circle */
-#themeToggle::before {
-  content: "🌙";
+ #themeToggle::before {
+  content: "🌙";  /* DARK MODE ICON */
   position: absolute;
   width: 22px;
   height: 22px;
@@ -406,6 +405,12 @@ body.light-mode #themeToggle::before {
   left: 27px;
   content: "☀️";
   background: var(--accent2);
+}
+
+/* EXTRA FIX: ensure no overlap ghost effect */
+#themeToggle::after {
+  content: "";
+  display: none;
 }
 
 /* Hover effect */
