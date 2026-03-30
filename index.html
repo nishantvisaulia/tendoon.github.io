@@ -138,17 +138,17 @@
 
   .nav-cta {
     background: var(--accent);
-    color: #fff !important;
-    padding: 12px 26px;
+    color: var(--black) !important;
+    padding: 10px 22px;
     font-weight: 700 !important;
-    border-radius: 6px;
-    clip-path: none; /* cleaner look */
-    transition: all 0.3s ease !important;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.3s, color 0.3s !important;
   }
-  .nav-cta:hover {
-    background: var(--accent2) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  .nav-cta:hover { background: var(--accent2) !important; color: var(--white) !important; }
+  
+  /* REMOVE underline from CTA button */
+  .nav-cta::after {
+    display: none !important;
   }
 
   /* HEADER MENU TEXT SIZE */  
