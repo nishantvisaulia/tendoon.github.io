@@ -18,14 +18,14 @@
 }
 
   body.light-mode {
-  --black: #F9FAFB;
-  --white: #111827;
+  --black: #F9FAFB;      /* background */
+  --white: #111827;      /* text */
   --accent: #8B5CF6;
   --accent2: #38BDF8;
   --accent3: #6D28D9;
-  --gray: #FFFFFF;
-  --gray2: #F3F4F6;
-  --text-muted: #4B5563;
+  --gray: #FFFFFF;       /* sections */
+  --gray2: #E5E7EB;      /* FIXED: darker than before */
+  --text-muted: #374151; /* FIXED: readable grey */
 }
   body {
   transition: background 0.3s, color 0.3s;
@@ -300,16 +300,51 @@ header a:hover {
     margin-bottom: 20px;
   }
 
-  /* DAY/NIGHT TOGGLE */ 
-  #themeToggle {
-  background: var(--accent);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
+/* DAY/NIGHT TOGGLE */ 
+#themeToggle {
+  background: var(--gray2);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px;
+  border-radius: 50px;
   cursor: pointer;
-  color: white;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  position: relative;
+  transition: all 0.3s ease;
 }
+
+/* Toggle circle */
+#themeToggle::before {
+  content: "🌙";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Light mode active */
+body.light-mode #themeToggle::before {
+  left: 27px;
+  content: "☀️";
+  background: var(--accent2);
+}
+
+/* Hover effect */
+#themeToggle:hover {
+  box-shadow: 0 0 10px var(--accent);
+}
+  /* DAY/NIGHT TOGGLE END HERE */ 
 
    /* SERVICES */
   #services { background: var(--black); }
@@ -672,12 +707,21 @@ header a:hover {
   .social-links a:hover { background: var(--accent); color: var(--black); border-color: var(--accent); }
 
  /* Country Flag */  
-  .countries {
+.countries {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   margin-top: 20px;
-  font-weight: 500;
+}
+
+.countries span {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.countries span:hover {
+  transform: scale(1.2);
 }
 
   /* SCROLLBAR */
@@ -1212,11 +1256,11 @@ header a:hover {
     <p>© 2026 Tendoon. All Rights Reserved.</p>
 
   <!-- Country Flag -->
-    <div class="countries">
-    <div>🇺🇸 USA</div>
-    <div>🇬🇧 UK</div>
-    <div>🇦🇪 UAE</div>
-    <div>🇮🇳 India</div>
+  <div class="countries">
+  <span title="USA">🇺🇸</span>
+  <span title="UK">🇬🇧</span>
+  <span title="UAE">🇦🇪</span>
+  <span title="India">🇮🇳</span>
   </div>
     
     <div class="social-links">
@@ -1321,7 +1365,7 @@ header a:hover {
 </style>
 
 <!-- DAY/NIGHT TOGGLE BUTTON -->
-  <script>
+<script>
 const toggleBtn = document.getElementById("themeToggle");
 
 toggleBtn.onclick = () => {
@@ -1329,17 +1373,14 @@ toggleBtn.onclick = () => {
 
   if(document.body.classList.contains("light-mode")){
     localStorage.setItem("theme", "light");
-    toggleBtn.innerHTML = "☀️";
   } else {
     localStorage.setItem("theme", "dark");
-    toggleBtn.innerHTML = "🌙";
   }
 };
 
 // Load saved theme
 if(localStorage.getItem("theme") === "light"){
   document.body.classList.add("light-mode");
-  toggleBtn.innerHTML = "☀️";
 }
 </script>
 
