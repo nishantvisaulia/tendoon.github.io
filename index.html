@@ -1481,6 +1481,203 @@ body.light-mode .pricing-card.featured {
   <div class="footer-bottom">
     <p>© 2026 Tendoon. All Rights Reserved.</p>
 
+    <!-- CLOCK -->
+<style>
+.clock-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+/* MINI CLOCK */
+.clock {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at center, #111 40%, #000 100%);
+  box-shadow: 
+    0 0 10px rgba(155,77,255,0.4),
+    inset 0 0 15px rgba(255,255,255,0.05);
+}
+
+/* OUTER RING GLOW */
+.clock::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #9b4dff, #f4c430);
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.7;
+}
+
+/* CENTER DOT */
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* HANDS */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(90deg);
+  border-radius: 10px;
+}
+
+.hour {
+  width: 3px;
+  height: 22px;
+  background: white;
+}
+
+.minute {
+  width: 2px;
+  height: 30px;
+  background: #9b4dff;
+}
+
+.second {
+  width: 1px;
+  height: 35px;
+  background: #f4c430;
+}
+
+/* DIGITAL TIME CENTER */
+.time {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  color: #aaa;
+  transform: translateY(-50%);
+}
+
+/* COUNTRY LABEL */
+.label {
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* DAY/NIGHT CSS (add this at the bottom) */
+.clock.day {
+  background: radial-gradient(circle at center, #ffffff 40%, #eaeaea 100%);
+  box-shadow: 
+    0 0 8px rgba(0,0,0,0.1),
+    inset 0 0 10px rgba(0,0,0,0.05);
+}
+.clock.day .hour { background: #111; }
+.clock.day .minute { background: #111; }
+.clock.day .second { background: #ff3b3b; }
+.clock.day .time { color: #333; }
+.clock.day .label { color: #111; }
+
+.clock.night {
+  background: radial-gradient(circle at center, #111 40%, #000 100%);
+  box-shadow: 
+    0 0 10px rgba(155,77,255,0.4),
+    inset 0 0 15px rgba(255,255,255,0.05);
+}
+.clock.night .hour { background: #fff; }
+.clock.night .minute { background: #9b4dff; }
+.clock.night .second { background: #f4c430; }
+.clock.night .time { color: #aaa; }
+.clock.night .label { color: #fff; }
+</style>
+
+<div class="clock-container">
+
+  <div class="clock" data-timezone="America/New_York">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">USA</div>
+  </div>
+
+  <div class="clock" data-timezone="Europe/London">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">UK</div>
+  </div>
+
+  <div class="clock" data-timezone="Asia/Dubai">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">UAE</div>
+  </div>
+
+  <div class="clock" data-timezone="Asia/Kolkata">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">INDIA</div>
+  </div>
+
+</div>
+
+<script>
+function updateClocks() {
+  const clocks = document.querySelectorAll(".clock");
+
+  clocks.forEach(clock => {
+    const timezone = clock.getAttribute("data-timezone");
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: timezone }));
+
+    const sec = now.getSeconds();
+    const min = now.getMinutes();
+    const hr = now.getHours();
+
+    const secDeg = sec * 6 + now.getMilliseconds() * 0.006;
+    const minDeg = min * 6 + sec * 0.1;
+    const hrDeg = hr * 30 + min * 0.5;
+
+    clock.querySelector(".second").style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
+    clock.querySelector(".minute").style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
+    clock.querySelector(".hour").style.transform = `translateX(-50%) rotate(${hrDeg}deg)`;
+
+    clock.querySelector(".time").innerText = now.toLocaleTimeString();
+
+    // DAY/NIGHT
+    if (hr >= 6 && hr < 18) {
+      clock.classList.add("day");
+      clock.classList.remove("night");
+    } else {
+      clock.classList.add("night");
+      clock.classList.remove("day");
+    }
+  });
+}
+
+setInterval(updateClocks, 50);
+updateClocks();
+</script>
+
   <!-- Country Flag -->
   <div class="countries">
   <img src="https://flagcdn.com/w40/us.png" alt="USA">
@@ -1634,171 +1831,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-</script>
-
-
-
-<!-- CLOCK -->
-<style>
-.clock-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-/* MINI CLOCK */
-.clock {
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-  position: relative;
-  background: radial-gradient(circle at center, #111 40%, #000 100%);
-  box-shadow: 
-    0 0 10px rgba(155,77,255,0.4),
-    inset 0 0 15px rgba(255,255,255,0.05);
-}
-
-/* OUTER RING GLOW */
-.clock::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #9b4dff, #f4c430);
-  z-index: -1;
-  filter: blur(6px);
-  opacity: 0.7;
-}
-
-/* CENTER DOT */
-.clock::before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: white;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-/* HANDS */
-.hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom;
-  transform: translateX(-50%) rotate(90deg);
-  border-radius: 10px;
-}
-
-.hour {
-  width: 3px;
-  height: 22px;
-  background: white;
-}
-
-.minute {
-  width: 2px;
-  height: 30px;
-  background: #9b4dff;
-}
-
-.second {
-  width: 1px;
-  height: 35px;
-  background: #f4c430;
-}
-
-/* DIGITAL TIME CENTER */
-.time {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-size: 9px;
-  color: #aaa;
-  transform: translateY(-50%);
-}
-
-/* COUNTRY LABEL */
-.label {
-  position: absolute;
-  bottom: 6px;
-  width: 100%;
-  text-align: center;
-  font-size: 8px;
-  color: #fff;
-  letter-spacing: 1px;
-}
-</style>
-
-<div class="clock-container">
-
-  <div class="clock" data-timezone="America/New_York">
-    <div class="time"></div>
-    <div class="hand hour"></div>
-    <div class="hand minute"></div>
-    <div class="hand second"></div>
-    <div class="label">USA</div>
-  </div>
-
-  <div class="clock" data-timezone="Europe/London">
-    <div class="time"></div>
-    <div class="hand hour"></div>
-    <div class="hand minute"></div>
-    <div class="hand second"></div>
-    <div class="label">UK</div>
-  </div>
-
-  <div class="clock" data-timezone="Asia/Dubai">
-    <div class="time"></div>
-    <div class="hand hour"></div>
-    <div class="hand minute"></div>
-    <div class="hand second"></div>
-    <div class="label">UAE</div>
-  </div>
-
-  <div class="clock" data-timezone="Asia/Kolkata">
-    <div class="time"></div>
-    <div class="hand hour"></div>
-    <div class="hand minute"></div>
-    <div class="hand second"></div>
-    <div class="label">INDIA</div>
-  </div>
-
-</div>
-
-<script>
-function updateClocks() {
-  const clocks = document.querySelectorAll(".clock");
-
-  clocks.forEach(clock => {
-    const timezone = clock.getAttribute("data-timezone");
-    const now = new Date(new Date().toLocaleString("en-US", { timeZone: timezone }));
-
-    const sec = now.getSeconds();
-    const min = now.getMinutes();
-    const hr = now.getHours();
-
-    const secDeg = sec * 6 + now.getMilliseconds() * 0.006;
-    const minDeg = min * 6 + sec * 0.1;
-    const hrDeg = hr * 30 + min * 0.5;
-
-    clock.querySelector(".second").style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
-    clock.querySelector(".minute").style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
-    clock.querySelector(".hour").style.transform = `translateX(-50%) rotate(${hrDeg}deg)`;
-
-    clock.querySelector(".time").innerText = now.toLocaleTimeString();
-  });
-}
-
-setInterval(updateClocks, 1000);
-updateClocks();
 </script>
 
 </body>
