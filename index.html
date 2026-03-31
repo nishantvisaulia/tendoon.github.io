@@ -1636,5 +1636,152 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+
+
+<!-- CLOCK -->
+  <style>
+.clock-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+.clock {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(155,77,255,0.3);
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(90deg);
+  border-radius: 10px;
+}
+
+.hour {
+  width: 5px;
+  height: 40px;
+  background: white;
+}
+
+.minute {
+  width: 3px;
+  height: 55px;
+  background: #9b4dff;
+}
+
+.second {
+  width: 2px;
+  height: 65px;
+  background: #f4c430;
+}
+
+.label {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.time {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+</style>
+
+<div class="clock-container">
+
+  <div class="clock" data-timezone="Asia/Kolkata">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">INDIA</div>
+  </div>
+
+  <div class="clock" data-timezone="America/New_York">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">USA</div>
+  </div>
+
+  <div class="clock" data-timezone="Europe/London">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">UK</div>
+  </div>
+
+  <div class="clock" data-timezone="Asia/Dubai">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">UAE</div>
+  </div>
+
+</div>
+
+<script>
+function updateClocks() {
+  const clocks = document.querySelectorAll(".clock");
+
+  clocks.forEach(clock => {
+    const timezone = clock.getAttribute("data-timezone");
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: timezone }));
+
+    const sec = now.getSeconds();
+    const min = now.getMinutes();
+    const hr = now.getHours();
+
+    const secDeg = sec * 6;
+    const minDeg = min * 6 + sec * 0.1;
+    const hrDeg = hr * 30 + min * 0.5;
+
+    clock.querySelector(".second").style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
+    clock.querySelector(".minute").style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
+    clock.querySelector(".hour").style.transform = `translateX(-50%) rotate(${hrDeg}deg)`;
+
+    clock.querySelector(".time").innerText = now.toLocaleTimeString();
+  });
+}
+
+setInterval(updateClocks, 1000);
+updateClocks();
+</script>
+
 </body>
 </html>
