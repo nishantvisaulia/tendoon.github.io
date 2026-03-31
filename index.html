@@ -158,8 +158,11 @@
     backdrop-filter: blur(8px);
   }
 
-  body.light-mode nav ul a {
-    color: #111827; /* DARK TEXT */
+  body.light-mode nav ul a:not(.nav-cta) {
+    color: #111827;
+  }
+  body.light-mode .nav-cta {
+    color: #ffffff !important;
   }
 
   body.light-mode nav ul a:hover {
@@ -168,7 +171,7 @@
 
   .nav-cta {
     background: var(--accent);
-    color: var(--black) !important;
+    color: #ffffff !important; /* FIX */
     padding: 10px 22px;
     font-weight: 700 !important;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
@@ -180,20 +183,6 @@
   .nav-cta::after {
     display: none !important;
   }
-
-  /* LIGHT MODE OVERRIDE FIX */
-body.light-mode .nav-cta {
-  color: #ffffff !important;
-}
-
-body.light-mode .nav-cta:hover {
-  color: #ffffff !important;
-}
-
-/* ALSO FIX ACTIVE STATE */
-nav ul a.nav-cta.active {
-  color: #ffffff !important;
-}
 
   /* HEADER MENU TEXT SIZE */  
   header a {
