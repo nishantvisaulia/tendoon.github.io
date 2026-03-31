@@ -1639,7 +1639,7 @@ window.addEventListener("scroll", () => {
 
 
 <!-- CLOCK -->
-  <style>
+<style>
 .clock-container {
   display: flex;
   justify-content: center;
@@ -1717,17 +1717,16 @@ window.addEventListener("scroll", () => {
   font-size: 14px;
   color: #aaa;
 }
+  
+.clock {
+  transform: scale(0.5);
+}
+.clock-container {
+  gap: 20px;
+}
 </style>
 
 <div class="clock-container">
-
-  <div class="clock" data-timezone="Asia/Kolkata">
-    <div class="time"></div>
-    <div class="hand hour"></div>
-    <div class="hand minute"></div>
-    <div class="hand second"></div>
-    <div class="label">INDIA</div>
-  </div>
 
   <div class="clock" data-timezone="America/New_York">
     <div class="time"></div>
@@ -1751,6 +1750,14 @@ window.addEventListener("scroll", () => {
     <div class="hand minute"></div>
     <div class="hand second"></div>
     <div class="label">UAE</div>
+  </div>
+
+  <div class="clock" data-timezone="Asia/Kolkata">
+    <div class="time"></div>
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+    <div class="label">INDIA</div>
   </div>
 
 </div>
