@@ -168,18 +168,32 @@
 
   .nav-cta {
     background: var(--accent);
-    color: #fff !important; /* FIXED */
+    color: var(--black) !important;
     padding: 10px 22px;
     font-weight: 700 !important;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     transition: background 0.3s, color 0.3s !important;
   }
-  .nav-cta:hover { background: var(--accent2) !important; color: #ffffff !important; }
+  .nav-cta:hover { background: var(--accent2) !important; color: var(--white) !important; }
   
   /* REMOVE underline from CTA button */
   .nav-cta::after {
     display: none !important;
   }
+
+  /* LIGHT MODE OVERRIDE FIX */
+body.light-mode .nav-cta {
+  color: #ffffff !important;
+}
+
+body.light-mode .nav-cta:hover {
+  color: #ffffff !important;
+}
+
+/* ALSO FIX ACTIVE STATE */
+nav ul a.nav-cta.active {
+  color: #ffffff !important;
+}
 
   /* HEADER MENU TEXT SIZE */  
   header a {
